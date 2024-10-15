@@ -1,0 +1,73 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo da página - para garantir full screen */
+  html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  }
+  
+  /* Container com fundo gradiente */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Fullscreen */
+    background: linear-gradient(135deg, #4c669f, #3b5998, #192f6a);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Animação suave no gradiente */
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+ /* Logo styling with responsiveness */
+.logo {
+    width: clamp(200px, 30%, 400px); /* Responsive size: 150px to 300px */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+    transition: width 0.3s ease; /* Smooth resizing */
+}
+  
+  /* Estilo dos textos */
+  h1 {
+    font-size: clamp(2rem, 5vw, 4rem); /* Responsivo: entre 2rem e 4rem */
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsivo: entre 1.5rem e 2.5rem */
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Responsividade adicional */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+    .logo {
+      width: clamp(100px, 25%, 200px); /* Adjust logo size on small screens */
+      margin-bottom: 15px;
+    }
+    h1 {
+        margin-bottom: 8px;
+      }
+}
+  
+@media (max-width: 680px) {
+    .logo {
+      width: 100px; /* Smaller logo for very small devices */
+    }
+  }
