@@ -34,9 +34,8 @@
 
  /* Logo styling with responsiveness */
 .logo {
-    width: clamp(200px, 30%, 400px); /* Responsive size: 150px to 300px */
+    width: clamp(300px, 40%, 500px); /* Responsive size: 150px to 300px */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px;
     transition: width 0.3s ease; /* Smooth resizing */
 }
   
@@ -51,6 +50,11 @@
     font-size: clamp(1.5rem, 4vw, 2.5rem); /* Responsivo: entre 1.5rem e 2.5rem */
     color: rgba(255, 255, 255, 0.8);
   }
+
+  h3 {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Responsivo: entre 1.5rem e 2.5rem */
+    color: rgba(255, 255, 255, 0.8);
+  }
   
   /* Responsividade adicional */
   @media (max-width: 768px) {
@@ -58,7 +62,7 @@
       padding: 10px;
     }
     .logo {
-      width: clamp(100px, 25%, 200px); /* Adjust logo size on small screens */
+      width: clamp(100px, 25%, 300px); /* Adjust logo size on small screens */
       margin-bottom: 15px;
     }
     h1 {
@@ -68,6 +72,6 @@
   
 @media (max-width: 680px) {
     .logo {
-      width: 100px; /* Smaller logo for very small devices */
+      width: 300px; /* Smaller logo for very small devices */
     }
   }
